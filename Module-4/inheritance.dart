@@ -1,29 +1,28 @@
-class Father{
-  String? name;
-  String land = "10 Biga Jomi";
-  String house = "Beautiful Building";
+class Person{
+  String name;
+  int age;
 
-  Father(){
-    print(" Object Created");
-  }
-  incomeSource(){
-    print("$name Income Source is Farming");
+  Person(this.name, this.age){
+    print("Person Constructor is Called");
+
   }
 
+  void displayInfo(){
+    print("Name : $name, Age : $age");
+  }
 }
 
-
-
-class Son extends Father{
-
-  @override
-  incomeSource() {
-    print("Income Source is App Development");
+class Student extends Person{
+  String school;
+  Student(String name, int age, this.school):super(name, age){
+    print("Student Constructor is Called");
   }
-
+  void showDetails(){
+    displayInfo();
+    print("School : $school");
+  }
 }
 void main(){
-  Son majid = Son();
-  print(majid.land);
-  majid.incomeSource();
+  Student majid = Student("Majid Bhuiyan", 25, "Jawar School");
+  majid.showDetails();
 }
