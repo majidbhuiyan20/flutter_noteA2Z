@@ -13,14 +13,11 @@ void main(){
   student.studentQuality();
 
   
-  Mobile iphone = Mobile(); // Object Created  **when we create a object then constructor by default call 
+  Mobile mobile = Mobile("Iphone 16 pro", "Iphone", 2025); // Object Created  **when we create a object then constructor by default call 
 
-  iphone.brandName = "Iphone";
-  iphone.mobileName = "Iphone 16 pro";
-  iphone.year = 2025;
 
-  iphone.charging();
-  iphone.unlock();
+  mobile.charging();
+  mobile.unlock();
 
   // If use static keyword then there is no need use object call
   Mobile.mobileClassStatic();
@@ -48,8 +45,8 @@ class Mobile{
   String? brandName;
 
   // Create constructor     
-  Mobile(){
-    print("Mobile Object Created");
+  Mobile(this.mobileName, this.brandName, this.year){
+    print("Mobile Constructor Created");
   }
 
   charging(){
