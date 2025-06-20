@@ -13,7 +13,7 @@ class Person{
 class Student extends Person{
 
   String school;
-  Student(String name, int age, this.school): super(name, age){
+  Student(String name, int age, this.school): super(name, age){  //Child class calls parent constructor using super.
     print("Student Construcotr is Called");
   }
   void showDetails(){

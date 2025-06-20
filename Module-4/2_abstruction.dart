@@ -14,7 +14,7 @@ abstract class Animal{
 class Dog extends Animal{
   String color;
 
-  Dog(String name, String food, String sound, this.color):super(name, food, sound);
+  Dog(String name, String food, String sound, this.color):super(name, food, sound);  // Child class calls parent constructor using super.
   void colorInfo(){
       print("$name color is $color");
   }
