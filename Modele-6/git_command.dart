@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //All Github Command
 
 // git config --global user.name "Your Name"
@@ -24,5 +23,3 @@
 // git checkout -b <name>          # Create + switch
 // git merge <branch>              # Merge branch
 // git branch -d <name>            # Delete branch
-=======
->>>>>>> 86f7e62 (Update Code)
