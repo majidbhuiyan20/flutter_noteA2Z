@@ -1,28 +1,32 @@
-<<<<<<< HEAD
-//All Github Command
+class Person{
+    String name;
+    int age;
 
-// git config --global user.name "Your Name"
-// git config --global user.email "you@example.com"
-// git config --list   # View config
+    Person(this.name, this.age){
+        print("Person Constructor is called");
+    }
 
+    void displayInfo(){
+        print("Name : $name, Age : $age");
+    }
+}
 
-// git init                        # Initialize a new Git repo
-// git clone <repo_url>            # Clone existing repo
+class Student extends Person{
 
+    String school;
+    Student(String name, int age, this.school): super(name, age){
+        print("Student constructor is Called");
+    }
+    void showDetails(){
+        displayInfo();
+        print("School name : $school");
+    }
+}
 
-// git status                      # See current changes
-// git add <file>                  # Stage a file
-// git add .                        # Stage all changes
-// git commit -m "Message"          # Commit staged changes
-// git rm <file>                    # Remove file and stage
-// git mv <old> <new>               # Rename file
+void main(){
+    Student student = Student("Majid Bhuiyan", 23, "Jawar High School");
+    student.showDetails();
+    Person person = Person("Majid Bhuiyan", 23);
+    person.displayInfo();
 
-
-// git branch                      # List branches
-// git branch <name>               # Create branch
-// git checkout <name>             # Switch branch
-// git checkout -b <name>          # Create + switch
-// git merge <branch>              # Merge branch
-// git branch -d <name>            # Delete branch
-=======
->>>>>>> 86f7e62 (Update Code)
+}
