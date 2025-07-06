@@ -1,40 +1,58 @@
-class Animal{
-    void eat(){
-        print("Animal is Eating ....");
-    }
+import 'Module-4/5_polymorphism.dart';
 
-    void sound(){
-        print("Animal is Make sound ...");
-    }
+abstract class ResturentService{
+    void takeOrder();
+    void serveFood();
+    void generateBill();
 }
 
-class Cat extends Animal{
-    @override
-  void eat() {
-    // TODO: implement eat
-    print("Cat Eats macher kata");
-  }
-}
-// if there use "abstract class Dog implements Animal" then override is no mandetory
-class Dog implements Animal{
+class KFC implements ResturentService{
   @override
-  void eat() {
-    print("Dog eat haddi");
+  void generateBill() {
+    print("KFC Generate Bill");
   }
 
   @override
-  void sound() {
-    print("Dog make sound Gheo Gheo");
+  void serveFood() {
+    print("KFC Serve Food");
+  }
+
+  @override
+  void takeOrder() {
+    print("KFC Take order");
   }
     
 }
+
+class pizzaHut implements ResturentService{
+  @override
+  void generateBill() {
+    print("Pizza hut Generate bill");
+  }
+
+  @override
+  void serveFood() {
+    print("Pizza hut Serve Food ");
+  }
+
+  @override
+  void takeOrder() {
+   print("Pizza hut take order");
+  }
+    
+}
+
 void main(){
+    KFC kfc = KFC();
+    kfc.takeOrder();
+    kfc.serveFood();
+    kfc.generateBill();
+    print("===================================");
 
-    Cat cat = Cat();
-    cat.eat();
-    cat.sound();
 
-    Dog dog = Dog();
-    dog.eat();
-    dog.sound();
+    pizzaHut pizza = pizzaHut();
+    pizza.takeOrder();
+    pizza.serveFood();
+    pizza.generateBill();
+    
 }
