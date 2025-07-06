@@ -1,33 +1,32 @@
-class Person{
+abstract class Animal{
     String name;
-    int age;
+    String food;
+    String sound;
 
-    Person(this.name, this.age){
-        print("Person Constructor is Called");
+    Animal(this.name, this.food, this.sound){
+        print("Animal constructor is Called");
+    }
 
+    void eat(){
+        print("$name is eating $food");
     }
-    void displayPerson(){
-        print("Name is : $name, Age : $age");
+
+    void makeSound(){
+        print("$name is making sound $sound");
     }
+
 }
 
-class Student extends Person{
+class Dog extends Animal{
 
-    String school;
-
-    Student(String name, int age, this.school ):super(name, age){
-        print("Student Constructor is Called" );
-
-
-    }
-    void displayStudent(){
-        displayPerson();
-        print("School name is : $school");
+    String color;
+    Dog(String name, String food, String sound, this.color):super(name, food, sound){
+        print("$name Color is $color");
     }
 }
 
 void main(){
-
-    Student std = Student("Majid Bhuiyan", 23, "ABC School" );
-    std.displayStudent();
+    Dog dog = Dog("Mithu", "Gorur Haddi", "Geo Gheo", "Black");
+    dog.eat();
+    dog.makeSound();
 }
