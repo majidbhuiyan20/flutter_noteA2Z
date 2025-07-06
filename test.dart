@@ -1,32 +1,40 @@
-abstract class Animal{
-    String name;
-    String food;
-    String sound;
-
-    Animal(this.name, this.food, this.sound){
-        print("Animal constructor is Called");
-    }
-
+class Animal{
     void eat(){
-        print("$name is eating $food");
+        print("Animal is Eating ....");
     }
 
-    void makeSound(){
-        print("$name is making sound $sound");
-    }
-
-}
-
-class Dog extends Animal{
-
-    String color;
-    Dog(String name, String food, String sound, this.color):super(name, food, sound){
-        print("$name Color is $color");
+    void sound(){
+        print("Animal is Make sound ...");
     }
 }
 
+class Cat extends Animal{
+    @override
+  void eat() {
+    // TODO: implement eat
+    print("Cat Eats macher kata");
+  }
+}
+// if there use "abstract class Dog implements Animal" then override is no mandetory
+class Dog implements Animal{
+  @override
+  void eat() {
+    print("Dog eat haddi");
+  }
+
+  @override
+  void sound() {
+    print("Dog make sound Gheo Gheo");
+  }
+    
+}
 void main(){
-    Dog dog = Dog("Mithu", "Gorur Haddi", "Geo Gheo", "Black");
+
+    Cat cat = Cat();
+    cat.eat();
+    cat.sound();
+
+    Dog dog = Dog();
     dog.eat();
-    dog.makeSound();
+    dog.sound();
 }
