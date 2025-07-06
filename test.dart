@@ -43,14 +43,14 @@ class pizzaHut implements ResturentService{
 }
 
 void main(){
-    KFC kfc = KFC();
+    ResturentService kfc = KFC();
     kfc.takeOrder();
     kfc.serveFood();
     kfc.generateBill();
     print("===================================");
 
 
-    pizzaHut pizza = pizzaHut();
+    ResturentService pizza = pizzaHut();
     pizza.takeOrder();
     pizza.serveFood();
     pizza.generateBill();
